@@ -32,7 +32,7 @@ const Card = () => {
         });
     }
   }, []);
-
+console.log(weather);
   if (weather.weather?.[0].icon === "01d") {
     document.body.style = `background-image: url('https://ntelemicro.com/wp-content/uploads/2022/01/Mayormente-soleado.jpeg')`;
   } else if (weather.weather?.[0].icon === "01n") {
@@ -83,11 +83,15 @@ const Card = () => {
         src={`https://openweathermap.org/img/wn/${weather.weather?.[0].icon}.png`}
         alt="icon"
       />
+      <br/>
+      <b>Sky:</b> "{weather.weather?.[0].description}"
       <br />
       <b>Country: </b>{weather.sys?.country} 
       <br />
       <b>City:</b> {weather.name} 
       <br/>
+      
+      
       <b>Temp:</b> {isCelsius ? fahrenheit : celsius} 
       <br />
       <b>Humidity: </b>{weather.main?.humidity} % <i className="fa-light fa-droplet-degree"></i>
