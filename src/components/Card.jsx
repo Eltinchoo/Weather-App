@@ -90,8 +90,6 @@ console.log(weather);
       <br />
       <b>City:</b> {weather.name} 
       <br/>
-      
-      
       <b>Temp:</b> {isCelsius ? fahrenheit : celsius} 
       <br />
       <b>Humidity: </b>{weather.main?.humidity} % <i className="fa-light fa-droplet-degree"></i>
